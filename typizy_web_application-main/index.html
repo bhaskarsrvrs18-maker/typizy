@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typizy – Typing Test</title>
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Typizy ⌨️</h1>
+
+  <!-- Quote / Paragraph -->
+  <div id="quote" class="animate">Loading...</div>
+
+  <!-- Typing Input -->
+  <textarea
+    id="input"
+    placeholder="Start typing here..."
+    autocomplete="off"
+    spellcheck="false"
+  ></textarea>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div>Time: <span id="time">60</span>s</div>
+    <div>WPM: <span id="wpm">0</span></div>
+    <div>Mistakes: <span id="mistakes">0</span></div>
+    <div>Accuracy: <span id="accuracy">100</span>%</div>
+  </div>
+
+  <!-- Restart Button -->
+  <button id="restart">Restart</button>
+
+  <!-- Main Script -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

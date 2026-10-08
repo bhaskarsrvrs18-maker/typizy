@@ -1,0 +1,141 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px;
+
+  /* Animated gradient background */
+  background: linear-gradient(
+    -45deg,
+    #020617,
+    #0f172a,
+    #020617,
+    #1e293b
+  );
+  background-size: 400% 400%;
+  animation: waveBackground 12s ease infinite;
+}
+
+/* Background animation */
+@keyframes waveBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* =======================
+   Quote box + animation
+   ======================= */
+
+#quote {
+  font-size: 20px;
+  margin: 20px auto;
+  width: 70%;
+  white-space: pre-line;
+  line-height: 1.6;
+  text-align: left;
+  background: #020617;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Fade + slide animation */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#quote.animate {
+  animation: fadeSlideIn 0.5s ease;
+}
+
+/* =======================
+   Textarea typing glow
+   ======================= */
+
+textarea {
+  width: 70%;
+  height: 120px;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+}
+
+/* =======================
+   Stats section
+   ======================= */
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.stats div {
+  background: #020617;
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+
+/* Pulse animation for stats */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.stats div.updated {
+  animation: pulse 0.3s ease;
+}
+
+/* =======================
+   Button animations
+   ======================= */
+
+button {
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.97);
+}
