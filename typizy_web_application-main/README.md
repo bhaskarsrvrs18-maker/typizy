@@ -53,9 +53,6 @@ VERCEL deployed link:   https://typizywebapplication.vercel.app
 
 ---
 
-## 🧪 Run Locally
-```bash
-git clone https://github.com/Malateshgouda813/typizy.git
-cd typizy
+
 
 
